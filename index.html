@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego de Memoria: Terremoto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Pantalla de historia -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-content">
+      <h1>🌋 ¡Emergencia en la Ciudad!</h1>
+      <p>
+        Un poderoso terremoto ha golpeado la ciudad.<br />
+        Los edificios tiemblan, la gente corre asustada y el caos se extiende.<br /><br />
+        Solo tú puedes restaurar el orden resolviendo los puzzles de emergencia.<br />
+        🔧 ¡Demuestra tu habilidad y salva la ciudad antes de que sea demasiado tarde!
+      </p>
+      <button id="startStoryBtn">Comenzar misión</button>
+    </div>
+  </div>
+
+  <!-- Contenedor del juego -->
+  <div class="game-container" id="gameContainer" style="display: none;">
+    <h1>🌋 Juego de Memoria: Terremoto</h1>
+
+    <div class="controls">
+      <button id="startBtn">Iniciar Juego</button>
+      <button id="restartBtn">Reiniciar</button>
+    </div>
+
+    <div class="stats">
+      <p>Nivel: <span id="levelDisplay">1</span></p>
+      <p>⏱️ Tiempo: <span id="timer">0</span>s</p>
+      <p>Movimientos: <span id="moves">0</span></p>
+      <p id="message"></p>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="scoreboard">
+      <h2>🏆 Mejores Puntajes</h2>
+      <ul id="scoreList"></ul>
+    </div>
+
+    <!-- Sonidos -->
+    <audio id="soundAcierto" src="sounds/acierto.mp3"></audio>
+    <audio id="soundError" src="sounds/error.mp3"></audio>
+    <audio id="soundGanar" src="sounds/ganar.mp3"></audio>
+    <audio id="soundPerder" src="sounds/perder.mp3"></audio>
+    <audio id="soundAmbiente" src="sounds/ambiente.mp3" loop></audio> <!-- 🎵 nuevo sonido de fondo -->
+  </div>
+
+  <!-- Pantalla educativa -->
+  <div class="info-screen" id="infoScreen" style="display: none;">
+    <div class="info-content">
+      <h2>🌎 Datos sobre los terremotos</h2>
+      <p id="infoText">Texto educativo aquí...</p>
+      <button id="continueBtn">Continuar misión</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de derrota -->
+  <div class="lose-screen" id="loseScreen" style="display: none;">
+    <div class="lose-content">
+      <h2>💥 ¡La ciudad colapsó!</h2>
+      <p>El terremoto fue demasiado fuerte...<br>
+      Vuelve a intentarlo para salvar a todos.</p>
+      <button id="retryBtn">🔁 Reintentar</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de victoria -->
+  <div class="win-screen" id="winScreen" style="display: none;">
+    <div class="win-content">
+      <h2>🏆 ¡Felicidades, has salvado la ciudad!</h2>
+      <p>
+        Gracias a tus habilidades y reflejos, la ciudad vuelve a estar segura.<br>
+        Las personas regresan a sus hogares y la vida continúa. 🌇<br><br>
+        ¡Eres un verdadero héroe de emergencias!
+      </p>
+      <button id="playAgainBtn">🎮 Jugar de nuevo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('escena-terremoto-al-estilo-comics-dibujos-animados_23-2151789058.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(3px);
+}
+
+/* === Pantalla de historia centrada === */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffcc00;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+  text-align: center;
+}
+
+.intro-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+}
+
+.intro-content h1 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.intro-content p {
+  color: #fff;
+  font-size: 1.15em;
+  line-height: 1.7em;
+  margin-bottom: 25px;
+}
+
+#startStoryBtn {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#startStoryBtn:hover {
+  background-color: #ff8e53;
+  transform: scale(1.05);
+}
+
+/* === Pantalla educativa === */
+.info-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+  z-index: 9998;
+  color: #fff;
+  text-align: center;
+}
+
+.info-content {
+  background: rgba(0,0,0,0.7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+  animation: fadeIn 0.8s ease;
+}
+
+.info-content h2 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.info-content p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-bottom: 25px;
+}
+
+#continueBtn {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+#continueBtn:hover {
+  background-color: #ff8e53;
+  transform: scale(1.05);
+}
+
+/* === Pantalla de derrota === */
+.lose-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 10000;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.lose-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(255, 80, 80, 0.6);
+}
+
+.lose-content h2 {
+  color: #ff5050;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.lose-content p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-bottom: 25px;
+}
+
+#retryBtn {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+#retryBtn:hover {
+  background-color: #ff8e53;
+  transform: scale(1.05);
+}
+
+/* === Pantalla de victoria === */
+.win-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 10001;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.win-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 25px rgba(0, 255, 100, 0.6);
+}
+
+.win-content h2 {
+  color: #00ff88;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.win-content p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin-bottom: 25px;
+}
+
+#playAgainBtn {
+  background-color: #00b35a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+#playAgainBtn:hover {
+  background-color: #00d46f;
+  transform: scale(1.05);
+}
+
+/* === Juego === */
+h1 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #000;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+button:hover {
+  background-color: #ff8e53;
+}
+
+.stats {
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.game-board {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.card {
+  width: 90px;
+  height: 120px;
+  background-color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.card .front {
+  background-color: #ffcc00;
+  color: #111;
+}
+
+.card .back {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: rotateY(180deg);
+  border: 2px solid #ffcc00;
+}
+
+#message {
+  font-weight: bold;
+  color: #00ff88;
+  margin-top: 10px;
+  text-shadow: 1px 1px #000;
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
